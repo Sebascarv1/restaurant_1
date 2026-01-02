@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Lobster&display=swap" rel="stylesheet">
 
 <style>
-    /* Base styling for the entire page */
+    /* Base styling for the page */
     html, body {
         height: 100%;
         margin: 0;
@@ -86,12 +86,12 @@
         width: 100%;
         height: 100%;
         background: transparent; /* Transparent overlay */
-        z-index: 2; /* Ensure overlay is above the video */
+        z-index: 2; /* Overlay is above the video */
     }
 
     .content {
         position: relative;
-        z-index: 3; /* Ensure content is above the overlay */
+        z-index: 3; /* Content is above the overlay */
         color: #fff;
         text-align: center;
         font-family: 'Dosis', sans-serif;
@@ -110,6 +110,7 @@
         margin-top: 10px;
     }
 
+    /* General container styling */
     .container {
         position: relative;
         margin: 2rem auto;
@@ -126,8 +127,8 @@
 
     .subcontainer {
         flex: 1 1 calc(33.33% - 20px);
-        background-color: #ffe0cc; /* Soft peach color for Latin flair */
-        border: 1px solid #d8a586; /* Border color */
+        background-color: #ffe0cc; /* Soft peach color */
+        border: 1px solid #d8a586; /* Border styling */
         border-radius: 8px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Rounded effect */
         text-align: center;
@@ -147,16 +148,17 @@
         border-radius: 5px; /* Optional: Add rounded corners */
     }
 
+    /* Price Styling */
     .price-label {
         font-weight: bold;
-        color: #a1230f; /* Vibrant rust red to stand out */
-        margin-top: 10px; /* Adds spacing above the price label */
-        font-size: 1.2rem; /* Slightly larger for visibility */
+        color: #a1230f; /* Vibrant rust red */
+        margin-top: 10px;
+        font-size: 1.2rem;
     }
 
     .price-amount {
         font-weight: 600;
-        color: #d83616; /* Distinct deep red for pricing */
+        color: #d83616; /* Distinct deep red */
     }
 
     /* Form Styling */
@@ -188,7 +190,7 @@
         background-color: #92210e;
     }
 
-    /* Footer styling */
+    /* Footer Styling */
     footer {
         background-color: #a1230f;
         color: #fff;
@@ -204,6 +206,22 @@
 
     /* Responsive Styling */
     @media (max-width: 768px) {
+        /* Compact menu on smaller screens */
+        nav ul {
+            flex-wrap: wrap; /* Wrap menu items */
+            justify-content: space-evenly; 
+            padding: 0 10px; 
+        }
+
+        nav ul li {
+            margin: 5px 0; /* Reduce spacing */
+        }
+
+        nav ul li a {
+            padding: 8px 10px; 
+            font-size: 0.9rem; 
+        }
+
         /* Subcontainers: Reduce padding and margins */
         .subcontainer {
             padding: 10px; 
@@ -239,7 +257,7 @@
 
         /* Form adjustments */
         form input, form button {
-            padding: 8px; /* Reduce input/button size */
+            padding: 8px; 
             font-size: 1rem; 
             margin-bottom: 5px;
         }
@@ -248,6 +266,25 @@
         footer {
             font-size: 0.9rem; /* Compact footer text */
             padding: 10px; 
+        }
+    }
+
+    @media (max-width: 480px) {
+        /* Stack menu vertically on very small screens */
+        nav ul {
+            flex-direction: column; /* Vertical layout */
+        }
+
+        nav ul li {
+            width: 100%; /* Menu items fill width */
+        }
+
+        nav ul li a {
+            text-align: center; /* Center text */
+        }
+
+        .subcontainer img {
+            height: 150px; /* Further reduce image height */
         }
     }
 </style>
@@ -272,9 +309,9 @@
     <!-- Video Section -->
     <div class="video-container">
     <!-- Non-Clickable Video -->
-    <video autoplay muted loop>
-        <source src="background_video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+    <video autoplay muted loop playsinline>
+    <source src="background_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
     </video>
     <!-- Transparent Overlay -->
     <div class="video-overlay"></div>
@@ -379,4 +416,18 @@
     <p>&copy; 2026 Food Truck Restaurant. All rights reserved.</p>
   </footer>
 </body>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.querySelector("video");
+
+    // Attempt to play the video programmatically
+    video.muted = true; // Mobile autoplay requires muted
+    video.play().catch((error) => {
+      console.error("Autoplay prevented:", error);
+    });
+  });
+</script>
+
 </html>
