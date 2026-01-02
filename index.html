@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Truck Restaurant</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Lobster&display=swap" rel="stylesheet">
+
+  <style>
+    /* Base styling for the entire page */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Dosis', Arial, sans-serif; /* Latin-inspired font */
+      background-color: #fdf2e9; /* Light contrasting background */
+    }
+
+    /* Header styling */
+    header {
+      background-color: #a1230f; /* Vibrant rust red */
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-family: 'Lobster', cursive; /* Bold, Latin-inspired font for branding */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #92210e; /* Hover effect */
+    }
+
+    /* Styling the <h2> */
+    h2.styled-heading {
+      font-family: 'Lobster', cursive;
+      font-size: 2rem; 
+      color: #a1230f;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Main content */
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 60vh; 
+        overflow: hidden;
+    }
+
+    .video-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        padding: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .content h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 3rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .container {
+      position: relative;
+      margin: 2rem auto;
+      max-width: 1200px;
+      box-sizing: border-box;
+    }
+
+    .multiplecontainer {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        gap: 15px;
+    }
+
+    .subcontainer {
+        flex: 1 1 calc(33.33% - 20px);
+        background-color: #ffe0cc; /* Soft color for Latin flair */
+        border: 1px solid #d8a586;
+        border-radius: 8px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Rounded effect */
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s;
+    }
+
+    .subcontainer:hover {
+        transform: translateY(-5px); /* Hover effect */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .subcontainer img {
+      height: 300px; /* Set a fixed height */
+      object-fit: cover; /* Crop the image to fit the height */
+      width: 100%; /* Ensures the image stretches to the full container width */
+      border-radius: 5px; /* Optional: Add rounded corners */
+    }
+
+    /* Form styling */
+    form {
+      background-color: #ffe0cc;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+      margin: auto;
+    }
+
+    form input, form button {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #d8a586;
+    }
+
+    form button {
+      background-color: #a1230f;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #92210e;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #a1230f;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Food Truck Restaurant</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Video Section -->
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="background_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="content">
+        <h1>Delicious Latin Flavor</h1>
+        <p>Food that sparks joy, crafted with love.</p>
+      </div>
+    </div>
+
+    <div class="container">
+        <h2 class="styled-heading" id="reservation">Who we are</h2>
+        <p>We are a family-run business founded from the heartfelt desire to bring the vibrant flavors of Colombia and Belgium together. Born from the necessity of sharing the colorful spices and rich culinary heritage of Latin America, combined with the comforting traditions of Belgian cuisine, we’ve created a unique blend that delights taste buds across Europe.</p>
+        <p>Our journey began in the streets of Gent, inspired by our family’s love for food and community, and the belief that every dish tells a story. By combining the zest and energy of Colombian street food with the warm and wholesome flavors of Belgium, we’ve set out to bridge two worlds and offer a taste of home to every visitor.</p>
+        <p>At Food Truck Restaurant, every meal is made with love, using authentic ingredients and recipes handed down through generations. Join us as we invite you to taste the magic of a multicultural journey on a plate!</p>
+        <div class="multiplecontainer">
+            <div class="subcontainer">
+                <img src="grandma1.jpg" alt="Tacos">
+            </div>
+            <div class="subcontainer">
+                <img src="grandma2.jpg" alt="Burgers">
+            </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="container">
+      <h2 class="styled-heading" id="menu">Explore Our Menu</h2>
+      <div class="multiplecontainer">
+        <div class="subcontainer">
+          <h2>Tacos</h2>
+          <p>Authentic handcrafted tacos.</p>
+          <img src="tacos.jpg" alt="Tacos">
+        </div>
+        <div class="subcontainer">
+          <h2>Burgers</h2>
+          <p>Juicy and flavorful burgers.</p>
+          <img src="hamburguer.jpg" alt="Burgers">
+        </div>
+        <div class="subcontainer">
+          <h2>Tacos</h2>
+          <p>Authentic handcrafted tacos.</p>
+          <img src="tacos.jpg" alt="Tacos">
+        </div>
+        <div class="subcontainer">
+          <h2>Hot dog</h2>
+          <p>Juicy and flavorful hot dogs.</p>
+          <img src="hotdog.jpg" alt="Hot dog">
+        </div>
+      </div>
+    </div>
+
+    <!-- Reservation Section -->
+    <div class="container">
+      <h2 class="styled-heading" id="reservation">Reserve a Table</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <input type="number" name="guests" placeholder="Number of Guests" required>
+        <button type="submit">Reserve Now</button>
+      </form>
+    </div>
+
+    
+  </main>
+
+
+  <div class="container">
+      <h2 class="styled-heading" id="contact">Contact</h2>
+      <div class="multiplecontainer">
+        <div class="subcontainer">
+          <h2>Where to find us</h2>
+          <p>Bij Sint-Jacobs 7</p>
+          <p>2000 Antwerp, Belgium</p>
+        </div>
+        <div class="subcontainer">
+          <h2>Opening Hours</h2>
+          <p>Monday - Friday: 11am - 10pm</p>
+          <p>Saturday - Sunday: 12pm - 11pm</p>
+        </div>
+        <div class="subcontainer">
+          <h2>How to find us</h2>
+          <p><strong>Tel:</strong>+32 9 388 44 95</p>
+          <p><strong>Email:</strong> reservaties.hmw@gmail.com</p>
+        </div>
+        <div class="subcontainer">
+          <h2>Burgers</h2>
+          <p>Juicy and flavorful burgers.</p>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Food Truck Restaurant. All rights reserved.</p>
+  </footer>
+</body>
+</html>
