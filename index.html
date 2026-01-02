@@ -63,41 +63,51 @@
 
     /* Main content */
     .video-container {
-        position: relative;
-        width: 100%;
-        height: 60vh; 
-        overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
     }
 
     .video-container video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Transparent overlay */
+    z-index: 2; /* Ensure overlay is above the video */
     }
 
     .content {
-        position: relative;
-        z-index: 1;
-        color: #fff;
-        text-align: center;
-        font-family: 'Dosis', sans-serif;
-        padding: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+    position: relative;
+    z-index: 3; /* Ensure content is above the overlay */
+    color: #fff;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     }
 
     .content h1 {
-      font-family: 'Lobster', cursive;
-      font-size: 3rem;
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
     }
 
     .content p {
-      font-size: 1.2rem;
-      margin-top: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
     }
 
     .container {
@@ -136,6 +146,19 @@
       width: 100%; /* Ensures the image stretches to the full container width */
       border-radius: 5px; /* Optional: Add rounded corners */
     }
+
+    .price-label {
+    font-weight: bold;
+    color: #a1230f; /* Vibrant rust red to stand out */
+    margin-top: 10px; /* Adds spacing above the price label */
+    font-size: 1.2rem; /* Slightly larger for visibility */
+    }
+
+    .price-amount {
+    font-weight: 600;
+    color: #d83616; /* Distinct deep red for pricing */
+    }
+
 
     /* Form styling */
     form {
@@ -200,14 +223,18 @@
   <main>
     <!-- Video Section -->
     <div class="video-container">
-      <video autoplay muted loop>
+    <!-- Non-Clickable Video -->
+    <video autoplay muted loop>
         <source src="background_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video>
-      <div class="content">
+    </video>
+    <!-- Transparent Overlay -->
+    <div class="video-overlay"></div>
+    <!-- Content -->
+    <div class="content">
         <h1>Delicious Latin Flavor</h1>
         <p>Food that sparks joy, crafted with love.</p>
-      </div>
+    </div>
     </div>
 
     <div class="container">
@@ -226,29 +253,33 @@
 
     <!-- Menu Section -->
     <div class="container">
-      <h2 class="styled-heading" id="menu">Explore Our Menu</h2>
-      <div class="multiplecontainer">
+        <h2 class="styled-heading" id="menu">Explore Our Menu</h2>
+        <div class="multiplecontainer">
         <div class="subcontainer">
-          <h2>Tacos</h2>
-          <p>Authentic handcrafted tacos.</p>
-          <img src="tacos.jpg" alt="Tacos">
+            <h2>Tacos</h2>
+            <p>Authentic handcrafted tacos.</p>
+            <img src="tacos.jpg" alt="Tacos">
+            <p class="price-label">Price: <span class="price-amount">8 EUR</span></p>
         </div>
         <div class="subcontainer">
-          <h2>Burgers</h2>
-          <p>Juicy and flavorful burgers.</p>
-          <img src="hamburguer.jpg" alt="Burgers">
+            <h2>Burgers</h2>
+            <p>Juicy and flavorful burgers.</p>
+            <img src="hamburguer.jpg" alt="Burgers">
+            <p class="price-label">Price: <span class="price-amount">10 EUR</span></p>
         </div>
         <div class="subcontainer">
-          <h2>Tacos</h2>
-          <p>Authentic handcrafted tacos.</p>
-          <img src="tacos.jpg" alt="Tacos">
+            <h2>Soups</h2>
+            <p>Authentic handcrafted soups.</p>
+            <img src="soup.jpg" alt="Soups">
+            <p class="price-label">Price: <span class="price-amount">6 EUR</span></p>
         </div>
         <div class="subcontainer">
-          <h2>Hot dog</h2>
-          <p>Juicy and flavorful hot dogs.</p>
-          <img src="hotdog.jpg" alt="Hot dog">
+            <h2>Hot dog</h2>
+            <p>Juicy and flavorful hot dogs.</p>
+            <img src="hotdog.jpg" alt="Hot dog">
+            <p class="price-label">Price: <span class="price-amount">5 EUR</span></p>
         </div>
-      </div>
+        </div>
     </div>
 
     <!-- Reservation Section -->
