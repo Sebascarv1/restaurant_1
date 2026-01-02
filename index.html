@@ -8,113 +8,113 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Lobster&display=swap" rel="stylesheet">
 
-  <style>
+<style>
     /* Base styling for the entire page */
     html, body {
-      height: 100%;
-      margin: 0;
-      font-family: 'Dosis', Arial, sans-serif; /* Latin-inspired font */
-      background-color: #fdf2e9; /* Light contrasting background */
+        height: 100%;
+        margin: 0;
+        font-family: 'Dosis', Arial, sans-serif; /* Latin-inspired font */
+        background-color: #fdf2e9; /* Light contrasting background */
     }
 
     /* Header styling */
     header {
-      background-color: #a1230f; /* Vibrant rust red */
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      font-family: 'Lobster', cursive; /* Bold, Latin-inspired font for branding */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #a1230f; /* Vibrant rust red */
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        font-family: 'Lobster', cursive; /* Bold, Latin-inspired font for branding */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 0;
-      display: flex;
-      justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0;
+        display: flex;
+        justify-content: center;
     }
-    
+
     nav ul li {
-      margin: 0 15px;
+        margin: 0 15px;
     }
 
     nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: 0.3s;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: 0.3s;
     }
 
     nav ul li a:hover {
-      background-color: #92210e; /* Hover effect */
+        background-color: #92210e; /* Hover effect */
     }
 
     /* Styling the <h2> */
     h2.styled-heading {
-      font-family: 'Lobster', cursive;
-      font-size: 2rem; 
-      color: #a1230f;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+        font-family: 'Lobster', cursive;
+        font-size: 2rem; 
+        color: #a1230f;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     /* Main content */
     .video-container {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
     }
 
     .video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent; /* Transparent overlay */
-    z-index: 2; /* Ensure overlay is above the video */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent; /* Transparent overlay */
+        z-index: 2; /* Ensure overlay is above the video */
     }
 
     .content {
-    position: relative;
-    z-index: 3; /* Ensure content is above the overlay */
-    color: #fff;
-    text-align: center;
-    font-family: 'Dosis', sans-serif;
-    padding: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+        position: relative;
+        z-index: 3; /* Ensure content is above the overlay */
+        color: #fff;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        padding: 20px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .content h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 3rem;
+        font-family: 'Lobster', cursive;
+        font-size: 3rem;
     }
 
     .content p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+        font-size: 1.2rem;
+        margin-top: 10px;
     }
 
     .container {
-      position: relative;
-      margin: 2rem auto;
-      max-width: 1200px;
-      box-sizing: border-box;
+        position: relative;
+        margin: 2rem auto;
+        max-width: 1200px;
+        box-sizing: border-box;
     }
 
     .multiplecontainer {
@@ -126,8 +126,8 @@
 
     .subcontainer {
         flex: 1 1 calc(33.33% - 20px);
-        background-color: #ffe0cc; /* Soft color for Latin flair */
-        border: 1px solid #d8a586;
+        background-color: #ffe0cc; /* Soft peach color for Latin flair */
+        border: 1px solid #d8a586; /* Border color */
         border-radius: 8px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Rounded effect */
         text-align: center;
@@ -141,69 +141,116 @@
     }
 
     .subcontainer img {
-      height: 300px; /* Set a fixed height */
-      object-fit: cover; /* Crop the image to fit the height */
-      width: 100%; /* Ensures the image stretches to the full container width */
-      border-radius: 5px; /* Optional: Add rounded corners */
+        height: 300px; /* Set a fixed height */
+        object-fit: cover; /* Crop the image to fit the height */
+        width: 100%; /* Ensures the image stretches to the full container width */
+        border-radius: 5px; /* Optional: Add rounded corners */
     }
 
     .price-label {
-    font-weight: bold;
-    color: #a1230f; /* Vibrant rust red to stand out */
-    margin-top: 10px; /* Adds spacing above the price label */
-    font-size: 1.2rem; /* Slightly larger for visibility */
+        font-weight: bold;
+        color: #a1230f; /* Vibrant rust red to stand out */
+        margin-top: 10px; /* Adds spacing above the price label */
+        font-size: 1.2rem; /* Slightly larger for visibility */
     }
 
     .price-amount {
-    font-weight: 600;
-    color: #d83616; /* Distinct deep red for pricing */
+        font-weight: 600;
+        color: #d83616; /* Distinct deep red for pricing */
     }
 
-
-    /* Form styling */
+    /* Form Styling */
     form {
-      background-color: #ffe0cc;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-      margin: auto;
+        background-color: #ffe0cc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        margin: auto;
     }
 
     form input, form button {
-      font-size: 1rem;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 1px solid #d8a586;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #d8a586;
     }
 
     form button {
-      background-color: #a1230f;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-      transition: 0.3s;
+        background-color: #a1230f;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        transition: 0.3s;
     }
 
     form button:hover {
-      background-color: #92210e;
+        background-color: #92210e;
     }
 
     /* Footer styling */
     footer {
-      background-color: #a1230f;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
+        background-color: #a1230f;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
     }
 
     footer p {
-      margin: 0;
-      font-size: 1rem;
+        margin: 0;
+        font-size: 1rem;
     }
 
-  </style>
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        /* Subcontainers: Reduce padding and margins */
+        .subcontainer {
+            padding: 10px; 
+            margin: 5px;
+        }
+
+        /* Compact images */
+        .subcontainer img {
+            height: 200px; /* Reduce image height */
+        }
+
+        /* Price Styling */
+        .price-label, .price-amount {
+            font-size: 1rem; /* Reduce text size */
+        }
+
+        /* Headings */
+        h2.styled-heading {
+            font-size: 1.5rem; /* Reduce heading size */
+            margin-bottom: 10px;
+        }
+
+        /* General container adjustments */
+        .multiplecontainer {
+            flex-wrap: wrap; /* Stack items vertically */
+            gap: 10px; 
+        }
+
+        .container {
+            margin: 1rem auto; /* Narrow margin */
+            width: calc(100% - 2rem); /* Adjust width */
+        }
+
+        /* Form adjustments */
+        form input, form button {
+            padding: 8px; /* Reduce input/button size */
+            font-size: 1rem; 
+            margin-bottom: 5px;
+        }
+
+        /* Footer adjustments */
+        footer {
+            font-size: 0.9rem; /* Compact footer text */
+            padding: 10px; 
+        }
+    }
+</style>
 </head>
 <body>
   <!-- Header -->
