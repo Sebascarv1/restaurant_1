@@ -149,7 +149,20 @@
         border-radius: 5px; /* Optional: Add rounded corners */
     }
 
-    /* New Styling for Row Layout */
+    /* Price Styling */
+    .price-label {
+        font-weight: bold;
+        color: #a1230f; /* Vibrant rust red */
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+
+    .price-amount {
+        font-weight: 600;
+        color: #d83616; /* Distinct deep red */
+    }
+
+        /* New Styling for Row Layout */
     .multiplecontainer.row-layout {
         display: flex; /* Enable flexbox */
         flex-wrap: nowrap; /* Prevent wrapping */
@@ -174,6 +187,133 @@
     .multiplecontainer.row-layout .subcontainer:hover {
         transform: translateY(-5px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Form Styling */
+    form {
+        background-color: #ffe0cc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        margin: auto;
+    }
+
+    form input, form button {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #d8a586;
+    }
+
+    form button {
+        background-color: #a1230f;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        transition: 0.3s;
+    }
+
+    form button:hover {
+        background-color: #92210e;
+    }
+
+    /* Footer Styling */
+    footer {
+        background-color: #a1230f;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        /* Compact menu on smaller screens */
+        nav ul {
+            flex-wrap: wrap; /* Wrap menu items */
+            justify-content: space-evenly; 
+            padding: 0 10px; 
+        }
+
+        nav ul li {
+            margin: 5px 0; /* Reduce spacing */
+        }
+
+        nav ul li a {
+            padding: 8px 10px; 
+            font-size: 0.9rem; 
+        }
+
+        /* Subcontainers: Reduce padding and margins */
+        .subcontainer {
+            padding: 10px; 
+            margin: 5px;
+        }
+
+        /* Compact images */
+        .subcontainer img {
+            height: 200px; /* Reduce image height */
+        }
+
+        /* Price Styling */
+        .price-label, .price-amount {
+            font-size: 1rem; /* Reduce text size */
+        }
+
+        /* Headings */
+        h2.styled-heading {
+            font-size: 1.5rem; /* Reduce heading size */
+            margin-bottom: 10px;
+        }
+
+        /* General container adjustments */
+        .multiplecontainer {
+            flex-wrap: wrap; /* Stack items vertically */
+            gap: 10px; 
+        }
+
+        .container {
+            margin: 1rem auto; /* Narrow margin */
+            width: calc(100% - 2rem); /* Adjust width */
+        }
+
+        /* Form adjustments */
+        form input, form button {
+            padding: 8px; 
+            font-size: 1rem; 
+            margin-bottom: 5px;
+        }
+
+        /* Footer adjustments */
+        footer {
+            font-size: 0.9rem; /* Compact footer text */
+            padding: 10px; 
+        }
+    }
+
+    @media (max-width: 480px) {
+        /* Stack menu vertically on very small screens */
+        nav ul {
+            flex-direction: column; /* Vertical layout */
+        }
+
+        nav ul li {
+            width: 100%; /* Menu items fill width */
+        }
+
+        nav ul li a {
+            text-align: center; /* Center text */
+        }
+
+        .subcontainer img {
+            height: 150px; /* Further reduce image height */
+        }
     }
 </style>
 
